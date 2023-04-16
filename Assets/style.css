@@ -1,0 +1,71 @@
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body {
+    
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+h3{
+    font-weight: bold;
+}
+
+.btn {
+    background-color: deepskyblue;
+}
+
+.forecast{
+    background-color:deepskyblue;
+    font-size: 0.9em;
+}
+
+span{
+    font-size: 1em;
+}
+
+
+li:hover {
+    background-color: lightslategray;
+    text-decoration: underline;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+.imgnDay {
+    text-align: center;
+}
+
+
+.list-group-item {
+    background-color: gainsboro;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.figurehead {
+    margin: auto;
+    display: flex;
+    position: relative;
+    margin-bottom:20px;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}

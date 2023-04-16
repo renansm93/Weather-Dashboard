@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    
+    <!--Title/header-->
+    <blockquote class="figurehead">
+        <img  src="./Assets/Images/bellow-header.jpg" alt="Picture bellow header" width="100%" height="130">
+        <h1> <strong>Weather Dashboard</strong></h1>
+    </blockquote>
+
+    <div class="container">
+        <!--Row for searching a city-->
+        <div class="row">
+            <div class="col-md-4 col-lg-3 bg-light">
+                <!--Here we create an HTML form for handling the inputs-->
+                <div class="text-center">
+                    <h4 class="pt-2"><strong>Search for a City:</strong></h4>
+                </div>
+                <!--Text box to search the city Name-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class="btn text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!--Search History-->
+                <br>
+                <div class="text-center">
+                    <h4 class="pt-2"><strong>Search History</strong></h4>
+                </div>
+                <ul class="list-group">
+                </ul>
+                <br>
+                <div class="text-center">
+                    <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="col-md-8 col-lg-8">
+                <div class="col-sm-12 ml-2 border border-dark rounded" id="current-weather">
+                    <h4 class="date mt-1 bolder" id="current-date"></h4>
+                    <h3 class="city-name mb-1 bolder" id="current-city"></h3>
+                    <p>Temperature: <span class="current" id="temperature"></span></p>
+                    <p>Wind: <span class="current" id="wind-speed"></span></p>
+                    <p>Humidity: <span class="current" id="humidity"></span></p>
+                    
+                </div>
+                <br>
+
+
+                <!--5-Day Forecast - Temp, Wind, Humidity for the next five days according to the city searched-->
+                <div class="col-sm-12" id="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col col-sm col-lg forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p class="imgnDay" id="fDate0"></p>
+                            <p class="imgnDay" id="fImg0"></p>
+                            <p class="imgnDay">Temp: <span id="fTemp0"></span></p>
+                            <p class="imgnDay">Wind: <span id="fWind0"></span></p>
+                            <p class="imgnDay">Humidity: <span id="fHumidity0"></span></p>
+                        </div>
+                        <div class="col col-sm col-lg forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p class="imgnDay" id="fDate1"></p>
+                            <p class="imgnDay" id="fImg1"></p>
+                            <p class="imgnDay">Temp:<span id="fTemp1"></span></p>
+                            <p class="imgnDay">Wind: <span id="fWind1"></span></p>
+                            <p class="imgnDay">Humidity:<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="col col-sm col-lg forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p class="imgnDay" id="fDate2"></p>
+                            <p class="imgnDay" id="fImg2"></p>
+                            <p class="imgnDay">Temp:<span id="fTemp2"></span></p>
+                            <p class="imgnDay">Wind: <span id="fWind2"></span></p>
+                            <p class="imgnDay">Humidity:<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="col col-sm col-lg forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p class="imgnDay" id="fDate3"></p>
+                            <p class="imgnDay" id="fImg3"></p>
+                            <p class="imgnDay">Temp:<span id="fTemp3"></span></p>
+                            <p class="imgnDay">Wind: <span id="fWind3"></span></p>
+                            <p class="imgnDay">Humidity:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col col-sm col-lg forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p class="imgnDay" id="fDate4"></p>
+                            <p class="imgnDay" id="fImg4"></p>
+                            <p class="imgnDay">Temp:<span id="fTemp4"></span></p>
+                            <p class="imgnDay">Wind: <span id="fWind4"></span></p>
+                            <p class="imgnDay">Humidity:<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+    <!--J-Query and Boostrap links-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <!--Code to Jvascript File-->
+    <script src="./Develop/script.js"></script>
+</body>
+</html>
