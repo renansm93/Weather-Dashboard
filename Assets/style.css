@@ -11,12 +11,45 @@ body {
     
 }
 
-h3{
+.figurehead {
+    margin: auto;
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h4 {
     font-weight: bold;
+    font-size: 16px;
 }
 
 .btn {
     background-color: deepskyblue;
+}
+
+.list-group-item {
+    background-color: gainsboro;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: lightslategray;
+}
+
+h3 {
+    font-weight: bold;
 }
 
 .forecast{
@@ -28,44 +61,6 @@ span{
     font-size: 1em;
 }
 
-
-li:hover {
-    background-color: lightslategray;
-    text-decoration: underline;
-}
-
-h4 {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-
-
-
 .imgnDay {
     text-align: center;
-}
-
-
-.list-group-item {
-    background-color: gainsboro;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.figurehead {
-    margin: auto;
-    display: flex;
-    position: relative;
-    margin-bottom:20px;
-}
-
-h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
 }
