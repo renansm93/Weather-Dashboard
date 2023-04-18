@@ -26,7 +26,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## Live URL
 
-<img src="Assets/Images/127.0.0.1_5500_index.html.png" widht=300 height=700 alt="Screenshot of the website">
+<img src="Assets/Images/Website-Screenshot.png" widht=300 height=700 alt="Screenshot of the website">
 
 
  https://renansm93.github.io/Weather-Dashboard/
