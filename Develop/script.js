@@ -81,7 +81,7 @@ function ctWeather(city) {
 }
 
 
-// Here we display the 5 days forecast for the current city.
+//5 days forecast for the current city
 function fdayWForecast(cityid) {
     let urlfdayWForecast = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityid + "&appid=" + APIKey + "&units=imperial";
     $.ajax({
